@@ -1,0 +1,12 @@
+<!ELEMENT Response (LogOn | LoggedOn | LogOff | ChangePassword | Error)*>
+<!ELEMENT LogOn (Account)*>
+<!ATTLIST LogOn   result	CDATA   #REQUIRED>
+<!ATTLIST LogOn   token	CDATA   #IMPLIED>
+<!ELEMENT Account (#PCDATA)>
+<!ELEMENT LoggedOn EMPTY>
+<!ATTLIST LoggedOn   result	CDATA   #REQUIRED>
+<!ELEMENT LogOff EMPTY>
+<!ATTLIST LogOff   result	CDATA   #REQUIRED>
+<!ELEMENT ChangePassword (#PCDATA)>
+<!ATTLIST ChangePassword	result	CDATA   #REQUIRED>
+<!ELEMENT Error (#PCDATA)>

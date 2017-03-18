@@ -1,0 +1,14 @@
+<!ELEMENT Request (LogOn | LoggedOn | LogOff | ChangePassword)*>
+<!ELEMENT LogOn EMPTY>
+<!ATTLIST LogOn   username	CDATA   #REQUIRED>
+<!ATTLIST LogOn   password	CDATA   #REQUIRED>
+<!ATTLIST LogOn   account	CDATA   #IMPLIED>
+<!ELEMENT LoggedOn EMPTY>
+<!ATTLIST LoggedOn   token	CDATA   #REQUIRED>
+<!ELEMENT LogOff EMPTY>
+<!ATTLIST LogOff   token	CDATA   #REQUIRED>
+<!ELEMENT ChangePassword EMPTY>
+<!ATTLIST ChangePassword	username	CDATA  #REQUIRED>
+<!ATTLIST ChangePassword	password	CDATA  #REQUIRED>
+<!ATTLIST ChangePassword	newpassword	CDATA  #REQUIRED>
+<!ATTLIST ChangePassword	hint		CDATA  #IMPLIED>
